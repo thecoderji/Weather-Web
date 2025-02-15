@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top-section">
+            <input type="text" id="cityInput" placeholder="Enter City">
+            <button onclick="searchWeather()">Search</button>
+            <button onclick="getGeolocation()">Use My Location</button>
+            <button id="themeSwitch" onclick="toggleTheme()">🌞</button>              
+        </div>
+        <div class="main-card">
+            <!-- Current Weather Display -->
+            <div id="currentWeather"></div>
+            
+            <!-- Extra Information -->
+            <div id="extraInfo"></div>
+            
+            <!-- Air Pollution Data -->
+            <div id="airPollution"></div>
+        </div>
+        <div class="hourly-forecast">
+            <!-- Hourly Forecast Display -->
+            <div id="hourlyForecast"></div>
+        </div>
+        <div class="right-section">
+            <!-- 5-Day Forecast Display -->
+            <div id="fiveDayForecast"></div>
+        </div>
+    </div>
+    <div id="error"></div>
+<script src="script.js"></script>
+<script>
+    document.getElementById('cityInput').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            searchWeather();
+        }
+    });
+</script>
+
+
+</body>
+</html>

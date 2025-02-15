@@ -1,0 +1,115 @@
+:root {
+  --blue-color: rgb(0, 120, 255);
+  --dark-color: rgb(27, 31, 41);
+  --background: linear-gradient(135deg, #b3cde0, #a5c7e7, #98c1ee, #8abcf5, #7db6fb);
+  --box_shadow: rgba(3, 46, 87, 0.3);
+  --dark-mode-background: #1a1a1a; /* Dark background color */
+  --dark-mode-text: #ffffff; /* Dark text color */
+  --dark-mode-button-bg: #2c3e50; /* Dark mode button background color */
+  --dark-mode-button-hover: #72a4d5; /* Dark mode button hover color */
+}
+
+html {
+  font-size: 16px; /* Set the default font size */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--dark-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 1.8rem 3.7rem var(--box_shadow);
+  padding: 1rem;
+  text-align: center;
+}
+
+.top-section {
+  width: 100%;
+  padding: 30px;
+  background: rgba(107, 180, 254, 0.693); /* Adjust the alpha value for translucency */
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.top-section h1 {
+  font-size: 2.5rem;
+  color: var(--dark-mode-text);
+  margin-bottom: 10px;
+}
+
+.top-section p {
+  font-size: 1.5rem;
+  color: #ecf0f1;
+}
+
+.top-section input {
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.top-section button {
+  padding: 15px 30px;
+  background: var(--dark-mode-button-bg);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.top-section button:hover {
+  background: var(--dark-mode-button-hover);
+}
+
+.main-card,
+.right-section,
+.hourly-forecast,
+.extra-info,
+.air-pollution,
+.five-day-forecast {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 1.8rem 3.7rem var(--box_shadow);
+  margin-bottom: 20px;
+}
+
+.dark-mode .top-section,
+.dark-mode .main-card,
+.dark-mode .right-section,
+.dark-mode .hourly-forecast,
+.dark-mode .extra-info,
+.dark-mode .air-pollution,
+.dark-mode .five-day-forecast {
+  background: var(--dark-mode-background);
+  color: var(--dark-mode-text);
+}
+
+#themeSwitch {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  color: var(--blue-color); /* Set the color based on your design */
+}
+
+.dark-mode #themeSwitch {
+  color: #ffcc00; /* Adjust the color for dark mode */
+}
